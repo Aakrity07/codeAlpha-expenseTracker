@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Budget Tracker | Aakrity</title>
+  <link rel="stylesheet" href="style.css">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+  integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+</head>
+<body>
+  <!-- HTML content goes here -->
+  <div class="headerBar">
+    <header>
+      <h1 class="title"> Budget Tracker<i class="fa-solid fa-coins"></i></h1>
+      
+      <h2 class="topbar">Your Current Balance</h2>
+      <p>
+        <span class="currency">Rs.</span>
+        <span class="balance"></span>
+      </p>
+      <header>
+  </div>
+  <div class="content">
+    <h3 class="secondTitle">Add a new transaction: </h3>
+    <div class="form">
+      <form id="expForm">
+        <div class="formLine left">
+          <span for="type">Type:</span>
+          
+          <select id="type">
+            
+            <option value="chooseOne">Choose one...</option>
+            <option value="income" style="color:green;"  ><b>Income</b> </option>
+            <option value="expense" style="color:red;"><b>Expense</b></option>
+          
+          </select>
+          
+        </div>
+        
+        <div class="formLine right">
+          <div class="formLine left">
+            <span for="date">Date:</span>
+            <input type="date" id="date">
+        </div>
+          <span for="name">Name:</span>
+          <input type="text" id="name">
+        </div>
+
+        <div class="formLine right">
+          <span for="amount">Amount:</span>
+          <input type="text" id="amount">
+        </div>
+        <button type="submit" class="buttonSave">Add to transactions</button>
+      </form>
+    </div>
+  </div>
+  <div class="content">
+    <table class="table">
+      <thead>
+        <tr>
+          <th><u>Type</u></th>
+          <th>Name</th>
+          <th>Date</th>
+          <th>Amount</th>
+          
+          <th>Options</th>
+        </tr>
+      </thead>
+      <tbody id="transactionTable"></tbody>
+    </table>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
